@@ -1,21 +1,30 @@
 {
     "title": "OpenPain thermal",
     "description": "This dataset contains BOLD and T1 data from chronic back pain (CBP) patients and healthy controls.  BOLD data was collected while subjects were subjected to painful thermal stimuli and provided real-time feedback in the form of continuous ratings of  perceived pain intensity.",
-    
+    "licenses": [
+		{
+			"name": "http://openpain.org/generalLicense.html"
+		}
+	],
     "creators": [
         {
-            "@type": "Organization",
             "name": "OpenPain"
         }
     ],
     "types": [
-        { 
-            "value": "MRI"
+        {
+			"information": {
+                "value": "MRI",
+                "valueIRI":"http://purl.bioontology.org/ontology/SNOMEDCT/113091000"
+           	}
         },
-        { 
-            "value": "fMRI"
-        }
-    ], 
+        {
+            "information": {
+                "value": "fMRI",
+                "valueIRI":"http://uri.interlex.org/base/ilx_0506130"
+            }
+		}
+    ],
     "distributions": [
 	        {
 			"formats": [
@@ -26,31 +35,43 @@
             			"value": "GB"
 		        },
 			"access": {
-				"landingPage": "https://www.openpain.org/"
+				"landingPage": "https://www.openpain.org/",
+				"authorizations": [
+					{
+						"value": "public"
+					}
+				]
 			}
 		}
 	],
+	"keywords": [
+		{
+			"value" : "human pain"
+		},
+		{
+			"value" : "brain imaging"
+		}
+	],
     "version": "1.0",
-    "privacy": "Open Access",
+    "privacy": "open",
     "isAbout": [
         {
-            "@type": "BiologicalEntity",
-            "name": "adult human"
-        }
-    ],
-    "licenses": [
+           "identifier": {
+                "identifier": "https://www.ncbi.nlm.nih.gov/taxonomy/9606",
+				"identifierSource": "NCBI Taxonomy Database"
+            },
+            "name":"Homo sapiens"
+        },
         {
-            "@type": "License",
-            "name": "Open Data Commons Public Domain Dedication and License"
+            "name":"adult"
         }
     ],
     "primaryPublications": [
         {
-            "@type": "Publication",
             "title": "Thermal pain dataset",
             "publicationVenue": "Neuron",
             "authorsList": "Baliki MN, Geha PY, Fields HL, Apkarian AV."
-	}
+		}
     ],
     "extraProperties": [
         {
@@ -61,7 +82,7 @@
                 }
             ]
         },
-	{
+		{
 			"category": "contact",
 			"values": [
 				{
@@ -74,6 +95,46 @@
 			"values": [
 				{
 					"value": "external"
+				}
+			]
+		},
+		{
+			"category": "origin_institution",
+			"values": [
+				{
+					"value": "Northwestern University"
+				}
+			]
+		},
+		{
+			"category": "origin_city",
+			"values": [
+				{
+					"value": "Evanston"
+				}
+			]
+		},
+		{
+			"category": "origin_province",
+			"values": [
+				{
+					"value": "Illinois"
+				}
+			]
+		},
+		{
+			"category": "origin_country",
+			"values": [
+				{
+					"value": "USA"
+				}
+			]
+		},
+		{
+			"category": "subjects",
+			"values": [
+				{
+					"value": "32"
 				}
 			]
 		},
